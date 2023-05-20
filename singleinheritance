@@ -1,0 +1,41 @@
+/*progarm of single level inheritance of mulitplicaiton */
+#include<iostream>
+using namespace std;
+class A
+{
+    private:
+    int b ;
+    int c;
+    public:
+    void dispay()
+    
+    {
+        cout<<"enter numbers respectiverly : "<<endl;
+        cin>>b;
+        cout<<endl;
+        cin>>c;
+    }
+    int product()
+    {
+        return b*c;
+    }
+};
+class B:public A
+{
+    public:
+    void datainput()
+    {
+        dispay();
+    }
+    void result()
+    {
+        int data=product();
+        cout <<"Multiplication of a and b is : "<<data<< endl;
+    }
+};
+int main()
+{
+    B sky;
+    sky.datainput();
+    sky.result();
+    return 0;
