@@ -1,0 +1,51 @@
+/*single level inheriance programming of grocerry */
+#include<iostream>
+using namespace std;
+class store //base class
+{
+    protected:
+    int mango = 10;
+    int guava=20;
+    int turmeric=40;
+    int quantity;
+    int total;
+    int fp;
+    public:
+    void choosen() 
+    {
+        cout<<"mango quantity :";
+        cin>>quantity;
+        cout<<endl;
+        cout<<"guava quantity :";
+        cin>>quantity;
+        cout<<endl;
+        cout<<" turmeric quantity :";
+        cin>>quantity;
+    }
+
+};
+class buyed : public store //derived class 
+{
+     
+      public:
+
+      void products()
+      {
+         total = mango*quantity;
+         total+= guava*quantity;
+         total+=turmeric*quantity;
+         fp=total;
+         cout<<"the total price  of the products :"<<fp;
+         
+      }
+      
+};
+int main()
+{
+    buyed price;
+    price.choosen();
+    price.products();
+    
+    return 0;
+}
+
