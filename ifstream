@@ -1,0 +1,12 @@
+/*fstream creating a file using constructor and writing in it using ofstream which is a class used for writing into a file.*/
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+    string st;
+    ifstream out ("temple.txt");
+    out>>st;
+    getline(out,st);
+    cout<<st;
+    return 0;
